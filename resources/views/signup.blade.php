@@ -10,7 +10,7 @@
     <!-- Navbar -->
 
     <nav class="navbar navbar-expand-lg " style="background-color:#87CEFA;">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="#" style="">
                 <img src="img/Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Kota Salatiga
             </a>
@@ -166,9 +166,8 @@
     </div>
 </div>
 </section>
-    <!-- Context -->
+    <!-- Context End-->
 
-    <h1></h1>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
 </html>
