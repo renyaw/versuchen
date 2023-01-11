@@ -27,3 +27,6 @@ Route::get('/dashboard', function () {
 Route::get('/sktm1', function () {
     return view('sktm1');
 });
+Route::get('/sktm2', function () {
+    return view('sktm2');
+});
