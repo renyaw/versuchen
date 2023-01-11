@@ -24,3 +24,6 @@ Route::get('/signup', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+Route::get('/sktm1', function () {
+    return view('sktm1');
+});
