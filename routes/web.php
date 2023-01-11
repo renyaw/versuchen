@@ -39,4 +39,7 @@ Route::get('/usaha', function () {
 Route::get('/domisili', function () {
     return view('domisili');
 });
+Route::get('/berkas', function () {
+    return view('berkas');
+});
 
