@@ -110,7 +110,7 @@
                     <br>
 
                     <div class="form-group">
-                        <label for="kelurahan">Kecamatan</label>
+                        <label for="kecamatan">Kecamatan</label>
                         <select class="form-control" name="kecamatan" id="kecamatan">
                         <option value="0">-- Pilih Kecamatan --</option>
                         </select>
