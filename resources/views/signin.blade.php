@@ -50,6 +50,7 @@
         <div class="col-6 mx-auto">
           <div class="card p-4 shadow-lg" style="border-radius: 1rem; border-color:#87CEFA; border-width: 3px;">
             <div class="container text-center mt-3">
+              <h2><b>SIP MAS</b></h2>
               <img src="img/logo.png" alt="Logo" width="170" height="115" class="d-inline-block" />
               <br />
               <br />
@@ -72,14 +73,10 @@
                     </label>
                     <input type="password" class="form-control" id="password" name="password"/>
                   </div>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end pb-3">
                     <a href="#" >Lupa kata sandi?</a>
                   </div>
-                  <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                  </div>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-center" >
+                  <div class="d-grid gap-2 mx-4" >
                     <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Masuk" />
                   </div>
                   <div class="d-grid gap-2 d-md-flex justify-content-md-center">
