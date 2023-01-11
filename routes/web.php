@@ -48,4 +48,7 @@ Route::get('/verifikasi', function () {
 Route::get('/berhasil', function () {
     return view('berhasil');
 });
+Route::get('/datadiri', function () {
+    return view('datadiri');
+});
 
