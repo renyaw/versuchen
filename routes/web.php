@@ -30,3 +30,7 @@ Route::get('/sktm1', function () {
 Route::get('/sktm2', function () {
     return view('sktm2');
 });
+Route::get('/dashboardpeg', function () {
+    return view('dashboardpeg');
+});
+
