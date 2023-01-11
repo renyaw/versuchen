@@ -67,7 +67,7 @@
         </div>
         <div class="row"> 
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <button type="button" class="btn btn-outline-success">Lihat Detail</button>
+                <a href="verifikasi" type="button" class="btn btn-outline-success">Lihat Detail</a>
             </div>
         </div>
     </div>
