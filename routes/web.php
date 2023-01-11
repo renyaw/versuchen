@@ -42,4 +42,7 @@ Route::get('/domisili', function () {
 Route::get('/berkas', function () {
     return view('berkas');
 });
+Route::get('/verifikasi', function () {
+    return view('verifikasi');
+});
 
