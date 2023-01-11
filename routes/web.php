@@ -36,4 +36,7 @@ Route::get('/dashboardpeg', function () {
 Route::get('/usaha', function () {
     return view('usaha');
 });
+Route::get('/domisili', function () {
+    return view('domisili');
+});
 
