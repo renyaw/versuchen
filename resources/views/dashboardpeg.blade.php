@@ -50,8 +50,8 @@
         <div class="row" style="margin-top:90px; margin-bottom:90px; ">
             <div class="col">
                 <div class="container" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
-                    <p class="fs-1 fw-bold" >22</p>
-                    
+                    <p class="fs-1 fw-bold text-light" >22</p>
+                    <p class="text-light" >Surat Pengantar Domisili Tempat Tinggal</p>
                 </div>   
             </div>
             <div class="col">
