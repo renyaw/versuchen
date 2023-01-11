@@ -46,7 +46,100 @@
 
     <!-- Context -->
     <div class="container">
-        <h4 class="text-center mt-3">Surat Keterangan Tidak Mampu</h4>
+        <div class="judul">
+            <h4 class="text-center mt-3">Surat Keterangan Tidak Mampu</h4>
+        </div>
+        <div class="konten">
+            <form action="" method="POST" autocomplete="on" name="form">
+                <div class="row mt-4">
+                     <!-- Left -->
+                    <div class="col-6">
+                        <div class="form-group">
+                            <!-- Default diambil dari daftar -->
+                            <label for="nama">Nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Default" >
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <!-- Default diambil dari daftar -->
+                            <label for="kecamatan">Kecamatan</label>
+                            <input type="text" class="form-control" id="kecamatan" name="kecamatan" placeholder="Default" >
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="pengantarKel">Surat Pengantar Kelurahan <a href="">Unduh</a></label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile02" name="pengantarKel" placeholder="Input">
+                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="KTP">Kartu Tanda Penduduk</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile02" name="KTP" placeholder="Input">
+                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="Berkas Lain">Berkas Lainnya</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile02" name="berkaslain" placeholder="Input">
+                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- End Left -->
+
+                    <!-- Right -->
+                    <div class="col-6">
+                        <div class="form-group">
+                            <!-- Default diambil dari daftar -->
+                            <label for="nik">NIK</label>
+                            <input type="text" class="form-control" id="nik" name="nik" placeholder="Default" >
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <!-- Default diambil dari daftar -->
+                            <label for="kelurahan">Kelurahan</label>
+                            <input type="text" class="form-control" id="kelurahan" name="kelurahan" placeholder="Default" >
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="tdkmampu">Surat Pernyataan Tidak Mampu</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile02" name="tdkmampu">
+                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="kk">Kartu Keluarga</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile02" name="kk">
+                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="kk">Tujuan Pembuatan SKTM</label>
+                            <div class="input-group">
+                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+
+                </div>
+                <div class="col-auto d-flex justify-content-end">
+                        <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Submit</button>
+                    </div>
+                <!-- End Right -->
+            </form>
+        </div>
+
     </div>
 
     <!-- Context End -->

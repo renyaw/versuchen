@@ -66,7 +66,7 @@
           <div class="">
             <div class="card" style="border-radius: 1rem; border-color:#87CEFA; border-width: 2px;">
                 <div class="card-body">
-                  <form method="POST" autocomplete="on" name="form" onsubmit="return cekSignUp()" action="">
+                  <form method="POST" autocomplete="on" name="form" onsubmit="" action="">
                     <div class="form-group">
                           <label for="nik">NIK</label>
                           <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" >
