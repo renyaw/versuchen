@@ -45,4 +45,7 @@ Route::get('/berkas', function () {
 Route::get('/verifikasi', function () {
     return view('verifikasi');
 });
+Route::get('/berhasil', function () {
+    return view('berhasil');
+});
 
