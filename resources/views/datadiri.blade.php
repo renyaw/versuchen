@@ -114,7 +114,8 @@
 
                 </div>
                 <div class="col-auto d-flex justify-content-end">
-                        <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Submit</button>
+                        <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Simpan</button>
+                        <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Kembali</button>
                     </div>
                 <!-- End Right -->
             </form>
