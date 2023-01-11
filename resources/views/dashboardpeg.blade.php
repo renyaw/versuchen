@@ -47,15 +47,27 @@
     <!-- Context -->
     
     <div class="container text-center">
-        <div class="row">
+        <div class="row" style="margin-top:90px; margin-bottom:90px; ">
             <div class="col">
-                One of three columns
+                <div class="container" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
+                    <p class="fs-1 fw-bold" >22</p>
+                    
+                </div>   
             </div>
             <div class="col">
-                One of three columns
-            </div>
+                <div class="container" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
+                    <p class="fs-1 fw-bold">22</p>
+                </div>
+            </div>   
             <div class="col">
-                One of three columns
+                <div class="container" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
+                    <p class="fs-1 fw-bold">22</p>
+                </div>   
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button type="button" class="btn btn-outline-success">Lihat Detail</button>
             </div>
         </div>
     </div>
