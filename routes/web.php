@@ -51,4 +51,7 @@ Route::get('/berhasil', function () {
 Route::get('/datadiri', function () {
     return view('datadiri');
 });
+Route::get('/kitas', function () {
+    return view('kitas');
+});
 
