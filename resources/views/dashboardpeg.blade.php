@@ -49,19 +49,27 @@
     <div class="container text-center">
         <div class="row" style="margin-top:90px; margin-bottom:90px; ">
             <div class="col">
-                <div class="container" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
-                    <p class="fs-1 fw-bold text-light" >22</p>
-                    <p class="text-light" >Surat Pengantar Domisili Tempat Tinggal</p>
+                <div class="container position-relative" style="width: 19rem; height: 19rem; background-color:#87CEFA; border-radius: 1rem;">  
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <p class="fs-1 fw-bold text-light" >22</p>
+                        <p class="text-light" >Kartu Izin Tinggal Terbatas</p>
+                    </div>
                 </div>   
             </div>
             <div class="col">
-                <div class="container" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
-                    <p class="fs-1 fw-bold">22</p>
+                <div class="container position-relative" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <p class="fs-1 fw-bold text-light ">22</p>
+                        <p class="text-light" >Surat Pengantar Domisili Usaha</p>
+                    </div>    
                 </div>
             </div>   
             <div class="col">
-                <div class="container" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
-                    <p class="fs-1 fw-bold">22</p>
+                <div class="container position-relative" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <p class="fs-1 fw-bold text-light">22</p>
+                        <p class="text-light" >Surat Keterangan Tidak Mampu</p>
+                    </div>
                 </div>   
             </div>
         </div>
