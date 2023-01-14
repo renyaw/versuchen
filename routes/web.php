@@ -49,7 +49,7 @@ Route::get('/berhasil', function () {
     return view('berhasil');
 });
 Route::get('/datadiri', function () {
-    return view('datadiri');
+    return view('kitas');
 });
 Route::get('/kitas', function () {
     return view('kitas');
