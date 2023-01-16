@@ -54,4 +54,7 @@ Route::get('/datadiri', function () {
 Route::get('/kitas', function () {
     return view('kitas');
 });
+Route::get('/navbar', function () {
+    return view('navbar');
+});
 
