@@ -47,7 +47,7 @@
     <!-- Context -->
     <div class="container">
         <div class="judul">
-            <h4 class="text-center mt-3">Surat KPengantar Domisili Usaha</h4>
+            <h4 class="text-center mt-3">Surat Pengantar Domisili Usaha</h4>
         </div>
         <div class="konten">
             <form action="" method="POST" autocomplete="on" name="form">

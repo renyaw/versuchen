@@ -71,7 +71,7 @@
                     <div class="card z-1" style="">
                     <div class="card-body text-center ">
                         <p class="card-text">Surat Keterangan</p>
-                        <p class="card-text fw-bold">Domisili Usaha</p>
+                        <p class="card-text fw-bold">Domisili</p>
                     </div>
                     </div>
                 </a>

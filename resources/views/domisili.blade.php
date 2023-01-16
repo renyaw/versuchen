@@ -47,7 +47,7 @@
     <!-- Context -->
     <div class="container">
         <div class="judul">
-            <h4 class="text-center mt-3">Surat Pengantar Domisili Tempat Tinggal</h4>
+            <h4 class="text-center mt-3">Surat Pengantar Domisili</h4>
         </div>
         <div class="konten">
             <form action="" method="POST" autocomplete="on" name="form">
@@ -82,6 +82,7 @@
                             </div>
                         </div>
                         <br>
+
                     </div>
                     <!-- End Left -->
 
@@ -103,6 +104,14 @@
                             <label for="kk">Kartu Keluarga</label>
                             <div class="input-group">
                                 <input type="file" class="form-control" id="inputGroupFile02" name="kk">
+                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="lain">Berkas Lain</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile02" name="lain" placeholder="Input">
                                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
                             </div>
                         </div>
