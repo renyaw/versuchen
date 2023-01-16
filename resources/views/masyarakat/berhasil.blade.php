@@ -52,7 +52,7 @@
         <p class="fs-5 fw-bold" >Permintaan akan segera diproses</p>
 
         <div class=" d-md-flex justify-content-md-center">
-            <a href="dashboard" class="btn btn-primary">Kembali ke Dashboard</a>
+            <a href="beranda" class="btn btn-primary">Kembali ke Dashboard</a>
         </div>
     </div>
     

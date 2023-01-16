@@ -146,7 +146,7 @@
                     </div>
 
                     <br>
-                    <p>Sudah Punya Akun? <a href="signin">Masuk</a></p>
+                    <p>Sudah Punya Akun? <a href="/">Masuk</a></p>
                     <br>
                     <div class="col-auto justify-content-md-end d-md-flex">
                     <button type="submit" name="submit" value="submit" class="btn btn-info text-light">Daftar</button>

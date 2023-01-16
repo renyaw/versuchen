@@ -21,8 +21,8 @@ Route::get('/signup', function () {
     return view('masyarakat/signup');
 });
 
-Route::get('/dashboard', function () {
-    return view('masyarakat/dashboard');
+Route::get('/beranda', function () {
+    return view('masyarakat/beranda');
 });
 Route::get('/sktm1', function () {
     return view('masyarakat/sktm1');
