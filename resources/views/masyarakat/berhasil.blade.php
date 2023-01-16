@@ -45,16 +45,31 @@
     <!-- Navbar End -->
 
     <!-- Context -->
-    <div class=" container d-grid justify-content-md-center" style="margin-top:90px;">
-        <img src="img/checked.png" width="280" height="280"/>
-              
-        <p class="fs-5 fw-bold" >Data Anda berhasil diunggah</p>
-        <p class="fs-5 fw-bold" >Permintaan akan segera diproses</p>
+    <div class=" container position-relative">
+        <div class=" position-absolute top-0 start-50 translate-middle" style="margin-top:350px;">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center" >
+                <img src="img/checked.png" width="200" height="200"/>
+            </div>    
 
-        <div class=" d-md-flex justify-content-md-center">
-            <a href="beranda" class="btn btn-primary">Kembali ke Dashboard</a>
+            <figure class="text-center" >
+                <blockquote class="blockquote">
+                    <p>Data Anda berhasil diunggah</p>
+                </blockquote>
+                <blockquote class="blockquote">
+                    <p>Permintaan akan segera diproses dan silakan lakukan konfirmasi ulang dengan klik WhatsApp dibawah </p>
+                </blockquote>
+            </figure>
+
+            <div class="d-grid gap-1 d-md-flex justify-content-md-center" style="margin-bottom:40px">
+                <a href="https://wa.me/085712573818"><img src="img/whatsapp.png"  width="100" height="100"/></a>
+            </div>
+
+            <div class="d-grid gap-1 d-md-flex justify-content-md-center">
+                <a href="beranda" class="btn btn-primary">Kembali ke Dashboard</a>
+            </div>
         </div>
     </div>
+    
     
     <!-- Context -->
 
