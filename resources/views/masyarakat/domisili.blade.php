@@ -119,10 +119,11 @@
                     </div>
 
                 </div>
+                <!-- End Right -->
                 <div class="col-auto d-flex justify-content-end">
                         <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Submit</button>
                     </div>
-                <!-- End Right -->
+
             </form>
         </div>
 

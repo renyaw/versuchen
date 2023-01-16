@@ -67,18 +67,18 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <label for="pengantarKel">Surat Pengantar Kelurahan <a href="">Unduh</a></label>
+                            <label for="pengantarKel">Surat Pengantar Kelurahan</label>
                             <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile02" name="pengantarKel" placeholder="Input">
-                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                                <button class="btn btn-secondary" type="button" id="button-addon2">Unduh</button>
                             </div>
                         </div>
                         <br>
                         <div class="form-group">
                             <label for="KTP">Kartu Tanda Penduduk</label>
                             <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile02" name="KTP" placeholder="Input">
-                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                                <button class="btn btn-secondary" type="button" id="button-addon2">Unduh</button>
                             </div>
                         </div>
                         <br>
@@ -103,25 +103,29 @@
                         <div class="form-group">
                             <label for="kk">Kartu Keluarga</label>
                             <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile02" name="kk">
-                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                                <button class="btn btn-secondary" type="button" id="button-addon2">Unduh</button>
                             </div>
                         </div>
                         <br>
                         <div class="form-group">
                             <label for="lain">Berkas Lain</label>
                             <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile02" name="lain" placeholder="Input">
-                                <label class="input-group-text" for="inputGroupFile02"></label>
+                                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                                <button class="btn btn-secondary" type="button" id="button-addon2">Unduh</button>
                             </div>
                         </div>
                         <br>
                     </div>
 
                 </div>
-                <div class="col-auto d-flex justify-content-end">
-                        <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Submit</button>
-                    </div>
+
+                <div class="col-auto d-grid gap-2 d-flex justify-content-end">
+                        <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Terima</button>
+                        <button type="submit" name="submit" value="submit" class="btn btn-outline-danger">Tolak</button>
+                        <button type="submit" name="submit" value="submit" class="btn btn-outline-primary">Kembali</button>
+                </div>
+
                 <!-- End Right -->
             </form>
         </div>
