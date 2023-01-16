@@ -61,6 +61,6 @@ Route::get('/lihatberkas', function () {
     return view('/kelurahan/lihatberkas');
 });
 Route::get('/status', function () {
-    return view('status');
+    return view('masyarakat/status');
 });
 
