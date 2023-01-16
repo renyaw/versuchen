@@ -18,47 +18,47 @@ Route::get('/', function () {
 });
 
 Route::get('/signup', function () {
-    return view('signup');
+    return view('masyarakat/signup');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('masyarakat/dashboard');
 });
 Route::get('/sktm1', function () {
-    return view('sktm1');
+    return view('masyarakat/sktm1');
 });
 Route::get('/sktm2', function () {
-    return view('sktm2');
+    return view('masyarakat/sktm2');
 });
 Route::get('/dashboardpeg', function () {
-    return view('dashboardpeg');
+    return view('kelurahan/dashboardpeg');
 });
 Route::get('/usaha', function () {
-    return view('usaha');
+    return view('masyarakat/usaha');
 });
 Route::get('/domisili', function () {
-    return view('domisili');
+    return view('masyarakat/domisili');
 });
 Route::get('/berkas', function () {
-    return view('berkas');
+    return view('masyarakat/berkas');
 });
 Route::get('/verifikasi', function () {
-    return view('verifikasi');
+    return view('kelurahan/verifikasi');
 });
 Route::get('/berhasil', function () {
-    return view('berhasil');
+    return view('masyarakat/berhasil');
 });
 Route::get('/datadiri', function () {
-    return view('datadiri');
+    return view('masyarakat/datadiri');
 });
 Route::get('/kitas', function () {
-    return view('kitas');
+    return view('masyarakat/kitas');
 });
 Route::get('/navbar', function () {
     return view('navbar');
 });
-Route::get('/berkas', function () {
-    return view('lihatberkas');
+Route::get('/lihatberkas', function () {
+    return view('/kelurahan/lihatberkas');
 });
 Route::get('/status', function () {
     return view('status');

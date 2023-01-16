@@ -67,7 +67,7 @@
             </svg>
             </div>
 
-                <a href="Usaha" class="text-decoration-none text-dark">
+                <a href="masyarakat/Usaha" class="text-decoration-none text-dark">
                     <div class="card z-1" style="">
                     <div class="card-body text-center ">
                         <p class="card-text">Surat Keterangan</p>

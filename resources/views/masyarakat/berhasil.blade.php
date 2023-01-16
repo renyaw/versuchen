@@ -11,7 +11,7 @@
 
     <nav class="navbar navbar-expand-lg " style="background-color:#87CEFA;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="signup" style="">
+            <a class="navbar-brand" href="masyarakat/signup" style="">
                 <img src="img/Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Kota Salatiga
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,41 +45,17 @@
     <!-- Navbar End -->
 
     <!-- Context -->
-    
-    <div class="container text-center">
-        <div class="row" style="margin-top:90px; margin-bottom:90px; ">
-            <div class="col">
-                <div class="container position-relative" style="width: 19rem; height: 19rem; background-color:#87CEFA; border-radius: 1rem;">  
-                    <div class="position-absolute top-50 start-50 translate-middle">
-                        <p class="fs-1 fw-bold text-light" >22</p>
-                        <p class="text-light" >Kartu Izin Tinggal Terbatas</p>
-                    </div>
-                </div>   
-            </div>
-            <div class="col">
-                <div class="container position-relative" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
-                    <div class="position-absolute top-50 start-50 translate-middle">
-                        <p class="fs-1 fw-bold text-light ">22</p>
-                        <p class="text-light" >Surat Pengantar Domisili Usaha</p>
-                    </div>    
-                </div>
-            </div>   
-            <div class="col">
-                <div class="container position-relative" style="width: 19rem; height:19rem; background-color:#87CEFA; border-radius: 1rem;">
-                    <div class="position-absolute top-50 start-50 translate-middle">
-                        <p class="fs-1 fw-bold text-light">22</p>
-                        <p class="text-light" >Surat Keterangan Tidak Mampu</p>
-                    </div>
-                </div>   
-            </div>
-        </div>
-        <div class="row"> 
-            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <a href="verifikasi" type="button" class="btn btn-outline-success">Lihat Detail</a>
-            </div>
+    <div class=" container d-grid justify-content-md-center" style="margin-top:90px;">
+        <img src="img/checked.png" width="280" height="280"/>
+              
+        <p class="fs-5 fw-bold" >Data Anda berhasil diunggah</p>
+        <p class="fs-5 fw-bold" >Permintaan akan segera diproses</p>
+
+        <div class=" d-md-flex justify-content-md-center">
+            <a href="masyarakat/dashboard" class="btn btn-primary">Kembali ke Dashboard</a>
         </div>
     </div>
-
+    
     <!-- Context -->
 
     <h1></h1>
