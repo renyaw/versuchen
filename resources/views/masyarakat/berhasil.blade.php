@@ -11,7 +11,7 @@
 
     <nav class="navbar navbar-expand-lg " style="background-color:#87CEFA;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="masyarakat/signup" style="">
+            <a class="navbar-brand" href="signup" style="">
                 <img src="img/Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Kota Salatiga
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
         <p class="fs-5 fw-bold" >Permintaan akan segera diproses</p>
 
         <div class=" d-md-flex justify-content-md-center">
-            <a href="masyarakat/dashboard" class="btn btn-primary">Kembali ke Dashboard</a>
+            <a href="dashboard" class="btn btn-primary">Kembali ke Dashboard</a>
         </div>
     </div>
     
