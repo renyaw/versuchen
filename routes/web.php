@@ -57,4 +57,10 @@ Route::get('/kitas', function () {
 Route::get('/navbar', function () {
     return view('navbar');
 });
+Route::get('/berkas', function () {
+    return view('lihatberkas');
+});
+Route::get('/status', function () {
+    return view('status');
+});
 
