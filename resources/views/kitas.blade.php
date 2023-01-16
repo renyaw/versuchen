@@ -51,13 +51,36 @@
         </div>
         <div class="konten">
             <form action="" method="POST" autocomplete="on" name="form">
+            <!-- Sebelum Text -->
+            <div class="row mt-4">
+                    <div class="col-6">
+                    <div class="form-group">
+                            <!-- Default -->
+                            <label for="nama">Nama Penjamin (WNI)</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Default" >
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-6">
+                    <div class="form-group">
+                            <!-- Default diambil dari daftar -->
+                            <label for="nik">NIK Penjamin (WNI)</label>
+                            <input type="text" class="form-control" id="nik" name="nik" placeholder="Default" >
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <!-- Text -->
+                <h5>Permohonan KITAS untuk :</h5>
+                <!-- Text Selesai -->
+                <!-- Setelah text -->
                 <div class="row mt-4">
                      <!-- Left -->
                     <div class="col-6">
-                        <div class="form-group">
-                            <!-- Blm tau default apa engga -->
-                            <label for="nama">Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Default" >
+                    <div class="form-group">
+                            <!-- Default -->
+                            <label for="nama">Nama (WNA)</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Isi Nama" >
                         </div>
                         <br>
                         <div class="form-group">
@@ -97,6 +120,7 @@
 
                     <!-- Right -->
                     <div class="col-6">
+
                         <div class="form-group">
                             <label for="kepolisian">Surat Tanda Lapor dari Kepolisian</label>
                             <div class="input-group">
