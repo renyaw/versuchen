@@ -93,3 +93,6 @@ Route::get('/kecamatan', function () {
     return view('kecamatan/dashboardkec');
 });
 
+Route::get('/kecamatan', function () {
+    return view('kecamatan/dashboardkec2');
+});
