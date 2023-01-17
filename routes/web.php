@@ -89,3 +89,7 @@ Route::get('/lihatkitas', function () {
     return view('kelurahan/lihatkitas');
 });
 
+Route::get('/kecamatan', function () {
+    return view('kecamatan/dashboardkec');
+});
+
