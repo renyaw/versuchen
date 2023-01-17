@@ -65,8 +65,8 @@ Route::get('/kitas', function () {
     return view('masyarakat/kitas');
 });
 
-Route::get('/navbarlayanan', function () {
-    return view('navbar/navbarlayanan');
+Route::get('/navbaruser', function () {
+    return view('navbar/navbaruser');
 });
 
 Route::get('/lihatberkas', function () {
