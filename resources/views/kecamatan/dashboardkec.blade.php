@@ -45,9 +45,21 @@
     <!-- Navbar End -->
 
     <!-- Context -->
-    <div class="container">
-        
+    <div class="container mt-3">
+        <div class= "container">
+            <p class="fs-3 fw-bold">Selamat datang di Dashboard Kecamatan Sidomukti</p>
+            <p class="fs-3 fw-bold">Silakan pilih kelurahan </p>
+        </div>
+        <div class="form-group col-8">
+            <select class="form-select" name="keperluan" id="kelurahan">
+            <option value="0">-- Pilih Kelurahan --</option>
+            </select>
+        </div>
     </div>
+    
+
+    
+
     <!-- Context -->
 
     <h1></h1>
