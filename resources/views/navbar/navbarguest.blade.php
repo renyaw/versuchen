@@ -35,10 +35,7 @@
                     </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Status</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link border rounded-4" href="#">Keluar</a>
+                        <a class="nav-link border rounded-4" href="#">Masuk</a>
                     </li>
                 </ul>
             </div>

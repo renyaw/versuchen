@@ -66,7 +66,7 @@ Route::get('/kitas', function () {
 });
 
 Route::get('/navbarlayanan', function () {
-    return view('navbarlayanan');
+    return view('navbar/navbarlayanan');
 });
 
 Route::get('/lihatberkas', function () {
