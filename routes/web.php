@@ -64,6 +64,12 @@ Route::get('/datadiri', function () {
 Route::get('/kitas', function () {
     return view('masyarakat/kitas');
 });
+Route::get('/kredit', function () {
+    return view('masyarakat/kredit');
+});
+Route::get('/lainnya', function () {
+    return view('masyarakat/lain');
+});
 
 Route::get('/navbaruser', function () {
     return view('navbar/navbaruser');
