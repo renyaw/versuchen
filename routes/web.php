@@ -67,7 +67,7 @@ Route::get('/kitas', function () {
 Route::get('/kredit', function () {
     return view('masyarakat/kredit');
 });
-Route::get('/lainnya', function () {
+Route::get('/lain', function () {
     return view('masyarakat/lain');
 });
 
