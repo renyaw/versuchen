@@ -71,9 +71,6 @@ Route::get('/lain', function () {
     return view('masyarakat/lain');
 });
 
-Route::get('/navbaruser', function () {
-    return view('navbar/navbaruser');
-});
 
 Route::get('/lihatberkas', function () {
     return view('/kelurahan/lihatberkas');
@@ -102,3 +99,18 @@ Route::get('/dashboardkec', function () {
 Route::get('/dashboardkec2', function () {
     return view('kecamatan/dashboardkec2');
 });
+
+
+// navbar
+Route::get('/navbaruser', function () {
+    return view('navbar/navbaruser');
+});
+
+Route::get('/navbarguest', function () {
+    return view('navbar/navbarguest');
+});
+
+Route::get('/navbaradmin', function () {
+    return view('navbar/navbaradmin');
+});
+
