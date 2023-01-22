@@ -8,35 +8,22 @@
         </head>
     <body>
     <!-- Navbar -->
-
-    <nav class="navbar navbar-expand-lg " style="background-color:#87CEFA;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="signup" style="">
+    <nav class="navbar navbar-expand-lg" style="background-color:#87CEFA;">
+        <div class="container">
+            <a class="navbar-brand" style="">
                 <img src="img/Logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Kota Salatiga
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="/">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown link
-                        </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                        <a class="nav-link border rounded-4" href="signup">Daftar</a>
                     </li>
                 </ul>
             </div>
@@ -63,13 +50,13 @@
                 <form name="form" method="POST" autocomplete="off" action="cek_login.php">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">
-                        <b>Username</b>    
+                        <b>Username</b>
                     </label>
                     <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" />
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">
-                        <b>Kata Sandi</b>    
+                        <b>Kata Sandi</b>
                     </label>
                     <input type="password" class="form-control" id="password" name="password"/>
                   </div>
@@ -80,7 +67,7 @@
                     <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Masuk" />
                   </div>
                   <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                  <a>Belum punya akun?</a>  
+                  <a>Belum punya akun?</a>
                   <a href="signup" >Daftar disini</a>
                   </div>
                 </form>
