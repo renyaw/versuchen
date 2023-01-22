@@ -9,11 +9,11 @@
     </head>
     <body>
     <!-- Navbar -->
-
-
+    @extends('navbar.navbaruser')
     <!-- Navbar End -->
 
     <!-- Content -->
+    @section('container')
     <div class="container mt-4">
     <div class="card p-2">
         <h5 class="card-header">Featured</h5>
@@ -36,7 +36,7 @@
         </div>
     </div>
     </div>
-
+    @endsection
 
     <!-- Content End -->
 
