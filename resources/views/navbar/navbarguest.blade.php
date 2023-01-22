@@ -1,13 +1,3 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="https://unpkg.com/feather-icons"></script>
-    </head>
-    <body>
     <!-- Navbar -->
 
     <nav class="navbar navbar-expand-lg" style="background-color:#87CEFA;">
@@ -22,16 +12,16 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Beranda</a>
+                        <a class="nav-link" href="/">Beranda</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             Layanan
                         </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Surat Keterangan Domisili Usaha</a></li>
-                        <li><a class="dropdown-item" href="#">Surat Permohonan KITAS</a></li>
-                        <li><a class="dropdown-item" href="#">Surat Keterangan Tidak Mampu</a></li>
+                        <li><a class="dropdown-item" href="signin">Surat Keterangan Domisili Usaha</a></li>
+                        <li><a class="dropdown-item" href="signin">Surat Pengantar Kredit</a></li>
+                        <li><a class="dropdown-item" href="signin">Surat Keterangan Tidak Mampu</a></li>
                     </ul>
                     </li>
                     <li class="nav-item">
@@ -44,7 +34,7 @@
     <!-- Navbar End -->
 
     <!-- Konten -->
-    <div class="container">
+    <div class="container mt-4">
         @yield('container')
     </div>
     <!-- Konten End -->
