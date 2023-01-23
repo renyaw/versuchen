@@ -11,8 +11,9 @@
     <!-- Navbar -->
     @extends('navbar.navbaradmin')
     <!-- Navbar End -->
-    
+
     <!-- Content -->
+    @section('container')
     <div class="container mt-4 d-flex justify-content-start">
         <div class="form-group">
             <select class="form-select " name="tampilan" id="tampilan">
@@ -43,6 +44,7 @@
             </div>
         </div>
     </section>
+    @end section
     <!-- Content End-->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
