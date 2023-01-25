@@ -118,6 +118,10 @@ Route::get('/navbaradmin', function () {
     return view('navbar/navbaradmin');
 });
 
+Route::get('/navbarkec', function () {
+    return view('navbar/navbarkec');
+});
+
 Route::get('/dashboardmasy', function () {
     return view('masyarakat/dashboard');
 });
