@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2023 at 02:59 AM
+-- Generation Time: Jan 30, 2023 at 08:31 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -74,6 +74,13 @@ CREATE TABLE `antrean_kredit` (
   `id_kel` int(11) NOT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `antrean_kredit`
+--
+
+INSERT INTO `antrean_kredit` (`id_kredit`, `sp_kel_kredit`, `kk_kredit`, `ktp_kredit`, `lain_kredit`, `tgl_antre_kredit`, `username`, `id_kel`, `status`) VALUES
+(1, 'spkel.pdf', 'kkkret.pdf', 'klp.pdf', 'lain.pdf', '2023-01-02', 'sqlgans', 201, 0);
 
 -- --------------------------------------------------------
 
