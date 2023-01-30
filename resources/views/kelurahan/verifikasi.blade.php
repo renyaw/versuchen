@@ -39,12 +39,22 @@
                         <th>Jenis Layanan</th>
                         <th>Status</th>
                         <th>Action</th>
+        
+                        
                     </tr>
-                </div>
+                    @foreach($query as $data)
+                    <td>{{$data->id_kredit}}</td>
+                    <td>{{$data->nik}}</td>
+                    <td>{{$data->nama}}</td>
+                    <td>{{$data->alamat}}</td>
+                    <td>{{$data->no_telp}}</td>
+                    <td>{{$data->ktp_kredit}}</td>
+                    @endforeach
+                </div> 
             </div>
         </div>
     </section>
-    @end section
+    @endsection
     <!-- Content End-->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\kreditController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,9 +54,7 @@ Route::get('/berkas', function () {
     return view('masyarakat/berkas');
 });
 
-Route::get('/verifikasi', function () {
-    return view('kelurahan/verifikasi');
-});
+Route::get('/verifikasi', [kreditController::class, 'index']);
 
 Route::get('/berhasil', function () {
     return view('masyarakat/berhasil');
