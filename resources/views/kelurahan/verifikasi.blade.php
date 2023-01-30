@@ -44,6 +44,7 @@
                     </tr>
                     @foreach($query as $data)
                     <td>{{$data->id_kredit}}</td>
+                    {{-- <td>{{$data->akun->nik}}</td> --}}
                     <td>{{$data->nik}}</td>
                     <td>{{$data->nama}}</td>
                     <td>{{$data->alamat}}</td>

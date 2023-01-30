@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
+
 use Illuminate\Http\Request;
 
-use App\Models\AntreanKredit;
+use App\Models\Akun;
 
-class kreditController extends Controller
+class AkunController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,23 +15,9 @@ class kreditController extends Controller
      */
     public function index()
     {
-        // $antrean_kredit = AntreanKredit::all();
-        // return view('kelurahan/verifikasi',compact('antrean_kredit'));
-        // Query Builder
-        $query = DB::table('antrean_kredit')
-                    ->select('antrean_kredit.*',"akun.nik as nik_u","masyarakat.*")
-                    ->leftJoin('akun',function($join) {
-                        $join->on('antrean_kredit.username','=','akun.username');
-                    })
-                    ->leftJoin('masyarakat',function($join) {
-                        $join->on('masyarakat.nik','=','akun.nik');
-                    })
-                    ->get();
-        
-        
+        $akun = Akun::all();
 
-        // dd($query);
-        return view('kelurahan/verifikasi',compact('query'));
+        return $akun;
     }
 
     /**

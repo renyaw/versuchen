@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\kreditController;
+use App\Http\Controllers\AkunController;
 
 /*
 |--------------------------------------------------------------------------
@@ -125,3 +126,4 @@ Route::get('/dashboardmasy', function () {
     return view('masyarakat/dashboard');
 });
 
+Route::resource('akun', AkunController::class);

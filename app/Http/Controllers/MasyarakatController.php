@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
+
+use App\Models\Masyarakat;
 use Illuminate\Http\Request;
 
-use App\Models\AntreanKredit;
-
-class kreditController extends Controller
+class MasyarakatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,23 +14,7 @@ class kreditController extends Controller
      */
     public function index()
     {
-        // $antrean_kredit = AntreanKredit::all();
-        // return view('kelurahan/verifikasi',compact('antrean_kredit'));
-        // Query Builder
-        $query = DB::table('antrean_kredit')
-                    ->select('antrean_kredit.*',"akun.nik as nik_u","masyarakat.*")
-                    ->leftJoin('akun',function($join) {
-                        $join->on('antrean_kredit.username','=','akun.username');
-                    })
-                    ->leftJoin('masyarakat',function($join) {
-                        $join->on('masyarakat.nik','=','akun.nik');
-                    })
-                    ->get();
-        
-        
-
-        // dd($query);
-        return view('kelurahan/verifikasi',compact('query'));
+        //
     }
 
     /**
@@ -58,10 +41,10 @@ class kreditController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Masyarakat  $masyarakat
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Masyarakat $masyarakat)
     {
         //
     }
@@ -69,10 +52,10 @@ class kreditController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Masyarakat  $masyarakat
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Masyarakat $masyarakat)
     {
         //
     }
@@ -81,10 +64,10 @@ class kreditController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Masyarakat  $masyarakat
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Masyarakat $masyarakat)
     {
         //
     }
@@ -92,10 +75,10 @@ class kreditController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Masyarakat  $masyarakat
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Masyarakat $masyarakat)
     {
         //
     }
