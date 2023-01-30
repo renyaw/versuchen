@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2023 at 06:39 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Jan 30, 2023 at 02:59 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `akun` (
   `username` varchar(15) NOT NULL,
   `password` varchar(15) NOT NULL,
   `nik` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `akun`
@@ -55,7 +55,7 @@ CREATE TABLE `antrean_domisili` (
   `username` varchar(15) NOT NULL,
   `id_kel` int(11) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,7 @@ CREATE TABLE `antrean_kredit` (
   `username` varchar(15) NOT NULL,
   `id_kel` int(11) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -93,7 +93,7 @@ CREATE TABLE `antrean_sktm` (
   `username` varchar(15) NOT NULL,
   `id_kel` int(11) NOT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -104,9 +104,9 @@ CREATE TABLE `antrean_sktm` (
 CREATE TABLE `domisili` (
   `noreg_dom` int(5) NOT NULL,
   `tgl_dom` date NOT NULL,
-  `id_status` int(11) NOT NULL,
+  `id_dom` int(11) NOT NULL,
   `id_kel` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -116,11 +116,11 @@ CREATE TABLE `domisili` (
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) NOT NULL,
-  `connection` text NOT NULL,
-  `queue` text NOT NULL,
-  `payload` longtext NOT NULL,
-  `exception` longtext NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -133,7 +133,7 @@ CREATE TABLE `failed_jobs` (
 CREATE TABLE `kecamatan` (
   `id_kec` int(5) NOT NULL,
   `nama_kec` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `kecamatan`
@@ -157,7 +157,7 @@ CREATE TABLE `kelurahan` (
   `alamat_kel` varchar(200) NOT NULL,
   `notelp_kel` varchar(13) NOT NULL,
   `id_kec` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `kelurahan`
@@ -175,9 +175,9 @@ INSERT INTO `kelurahan` (`id_kel`, `nama_kel`, `alamat_kel`, `notelp_kel`, `id_k
 CREATE TABLE `kredit` (
   `noreg_kredit` int(5) NOT NULL,
   `tgl_kredit` date NOT NULL,
-  `id_status` int(11) NOT NULL,
+  `id_kredit` int(11) NOT NULL,
   `id_kel` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -192,7 +192,7 @@ CREATE TABLE `masyarakat` (
   `nama_ibu` varchar(30) NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `no_telp` varchar(13) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `masyarakat`
@@ -209,7 +209,7 @@ INSERT INTO `masyarakat` (`nik`, `nama`, `tgl_lahir`, `nama_ibu`, `alamat`, `no_
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -230,8 +230,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -243,11 +243,11 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `personal_access_tokens` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) NOT NULL,
+  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tokenable_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `token` varchar(64) NOT NULL,
-  `abilities` text DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `expires_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -263,9 +263,9 @@ CREATE TABLE `personal_access_tokens` (
 CREATE TABLE `sktm` (
   `noreg_sktm` int(5) NOT NULL,
   `tgl_sktm` date NOT NULL,
-  `id_status` int(11) NOT NULL,
+  `id_sktm` int(11) NOT NULL,
   `id_kel` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -276,7 +276,7 @@ CREATE TABLE `sktm` (
 CREATE TABLE `status` (
   `id_status` int(1) NOT NULL,
   `proses` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `status`
@@ -295,11 +295,11 @@ INSERT INTO `status` (`id_status`, `proses`) VALUES
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
-  `remember_token` varchar(100) DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -347,7 +347,7 @@ ALTER TABLE `antrean_sktm`
 --
 ALTER TABLE `domisili`
   ADD PRIMARY KEY (`noreg_dom`),
-  ADD KEY `fk_id_status_dom` (`id_status`),
+  ADD KEY `fk_id_status_dom` (`id_dom`),
   ADD KEY `fk_id_kel_dom` (`id_kel`);
 
 --
@@ -375,7 +375,7 @@ ALTER TABLE `kelurahan`
 --
 ALTER TABLE `kredit`
   ADD PRIMARY KEY (`noreg_kredit`),
-  ADD KEY `fk_id_status_kredit` (`id_status`),
+  ADD KEY `fk_id_status_kredit` (`id_kredit`),
   ADD KEY `fk_id_kel_kredit` (`id_kel`);
 
 --
@@ -409,7 +409,7 @@ ALTER TABLE `personal_access_tokens`
 --
 ALTER TABLE `sktm`
   ADD PRIMARY KEY (`noreg_sktm`),
-  ADD KEY `fk_id_status_sktm` (`id_status`),
+  ADD KEY `fk_id_status_sktm` (`id_sktm`),
   ADD KEY `fk_id_kel_sktm` (`id_kel`);
 
 --
@@ -492,7 +492,7 @@ ALTER TABLE `antrean_sktm`
 --
 ALTER TABLE `domisili`
   ADD CONSTRAINT `fk_id_kel_dom` FOREIGN KEY (`id_kel`) REFERENCES `kelurahan` (`id_kel`),
-  ADD CONSTRAINT `fk_id_status_dom` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`);
+  ADD CONSTRAINT `fk_id_status_dom` FOREIGN KEY (`id_dom`) REFERENCES `antrean_domisili` (`id_dom`);
 
 --
 -- Constraints for table `kelurahan`
@@ -505,14 +505,14 @@ ALTER TABLE `kelurahan`
 --
 ALTER TABLE `kredit`
   ADD CONSTRAINT `fk_id_kel_kredit` FOREIGN KEY (`id_kel`) REFERENCES `kelurahan` (`id_kel`),
-  ADD CONSTRAINT `fk_id_status_kredit` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`);
+  ADD CONSTRAINT `fk_id_status_kredit` FOREIGN KEY (`id_kredit`) REFERENCES `antrean_kredit` (`id_kredit`);
 
 --
 -- Constraints for table `sktm`
 --
 ALTER TABLE `sktm`
   ADD CONSTRAINT `fk_id_kel_sktm` FOREIGN KEY (`id_kel`) REFERENCES `kelurahan` (`id_kel`),
-  ADD CONSTRAINT `fk_id_status_sktm` FOREIGN KEY (`id_status`) REFERENCES `status` (`id_status`);
+  ADD CONSTRAINT `fk_id_status_sktm` FOREIGN KEY (`id_sktm`) REFERENCES `antrean_sktm` (`id_sktm`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
