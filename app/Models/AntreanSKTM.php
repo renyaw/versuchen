@@ -22,7 +22,7 @@ class AntreanSKTM extends Model
         return $this->belongsTo(status::class, 'id_status', 'id_status');
     }
     // Layanan
-    public function sktm()
+    public function input_sktm()
     {
         return $this->belongsTo(SKTM::class, 'id_sktm', 'id_sktm');
     }

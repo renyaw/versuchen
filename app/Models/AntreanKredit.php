@@ -12,20 +12,20 @@ class AntreanKredit extends Model
     protected $table = 'antrean_kredit';
     protected $guarded = [];
 
+    // User
     public function pengajuan_kredit()
     {
         return $this->belongsTo(Akun::class, 'username', 'username');
     }
-    public function kredit()
+    // Status
+    public function kredit_status()
+    {
+        return $this->belongsTo(status::class, 'id_status', 'id_status');
+    }
+    //Layanan
+    public function input_kredit()
     {
         return $this->belongsTo(Kredit::class, 'id_kredit', 'id_kredit');
     }
-    public function status()
-    {
-        return $this->hasMany(status::class, 'id_status', 'id_status');
-    }
-    public function Akun()
-    {
-        return $this->hasMany(Akun::class, 'username', 'username');
-    }
+
 }
