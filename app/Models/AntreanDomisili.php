@@ -12,20 +12,19 @@ class AntreanDomisili extends Model
     protected $table = 'antrean_domisili';
     protected $guarded = [];
 
+    //User
     public function pengajuan_domisili()
     {
         return $this->belongsTo(Akun::class, 'username', 'username');
     }
-    public function domisili()
+    //Status
+    public function dom_status()
     {
-        return $this->belongsTo(domisili::class, 'id_dom', 'id_dom');
+        return $this->belongsTo(status::class, 'id_status', 'id_status');
     }
-    public function status()
+    //Layanan
+    public function input_dom()
     {
-        return $this->hasMany(status::class, 'id_status', 'id_status');
-    }
-    public function Akun()
-    {
-        return $this->hasMany(Akun::class, 'username', 'username');
+        return $this->belongsTo(Domisili::class, 'id_dom', 'id_dom');
     }
 }
