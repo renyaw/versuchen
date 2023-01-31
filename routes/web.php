@@ -133,3 +133,7 @@ Route::resource('akun', AkunController::class);
 Route::resource('antreanSKTM', SKTMController::class);
 
 Route::resource('antreandomisili', SKTMController::class);
+
+Route::resource('kelurahan', SKTMController::class);
+
+Route::resource('kecamatan', SKTMController::class);
