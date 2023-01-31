@@ -22,9 +22,21 @@ class Akun extends Model
     {
         return $this->belongsTo(Masyarakat::class, 'nik', 'nik');
     }
-    
+
     public function antrean_kredit()
     {
-        return $this->hasMany(Masyarakat::class, 'username', 'username');
+        return $this->hasMany(AntreanKredit::class, 'username', 'username');
     }
+
+    public function antrean_sktm()
+    {
+        return $this->hasMany(AntreanSKTM::class, 'username', 'username');
+    }
+
+    public function antrean_domisili()
+    {
+        return $this->hasMany(AntreanDomisili::class, 'username', 'username');
+    }
+
+
 }
