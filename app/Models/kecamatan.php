@@ -12,7 +12,7 @@ class kecamatan extends Model
     protected $table = 'kecamatan';
     protected $guarded = [];
 
-    public function kelurahan()
+    public function kec_kel()
     {
         return $this->hasMany(kelurahan::class, 'id_kec', 'id_kec');
     }
