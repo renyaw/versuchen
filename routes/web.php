@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\kreditController;
 use App\Http\Controllers\AkunController;
+use App\Http\Controllers\SKTMController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -127,3 +129,5 @@ Route::get('/dashboardmasy', function () {
 });
 
 Route::resource('akun', AkunController::class);
+
+Route::resource('antreanSKTM', SKTMController::class);
