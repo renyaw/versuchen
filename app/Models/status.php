@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class status extends Model
 {
     use HasFactory;
+    public function antrean_kredit()
+    {
+        return $this->belongsTo(AntreanKredit::class, 'id_kredit', 'id_kredit');
+    }
+
 }

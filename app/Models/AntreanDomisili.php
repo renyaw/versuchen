@@ -12,8 +12,16 @@ class AntreanDomisili extends Model
     protected $table = 'antrean_domisili';
     protected $guarded = [];
 
-    public function akun()
+    public function domisili()
     {
-        return $this->belongsTo(Akun::class, 'username', 'username');
+        return $this->belongsTo(domisili::class, 'id_dom', 'id_dom');
+    }
+    public function status()
+    {
+        return $this->hasMany(status::class, 'id_status', 'id_status');
+    }
+    public function Akun()
+    {
+        return $this->hasMany(Akun::class, 'username', 'username');
     }
 }

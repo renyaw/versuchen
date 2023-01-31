@@ -12,8 +12,16 @@ class AntreanKredit extends Model
     protected $table = 'antrean_kredit';
     protected $guarded = [];
 
-    public function akun()
+    public function kredit()
     {
-        return $this->belongsTo(Akun::class, 'username', 'username');
+        return $this->belongsTo(Kredit::class, 'id_kredit', 'id_kredit');
+    }
+    public function status()
+    {
+        return $this->hasMany(status::class, 'id_status', 'id_status');
+    }
+    public function Akun()
+    {
+        return $this->hasMany(Akun::class, 'username', 'username');
     }
 }

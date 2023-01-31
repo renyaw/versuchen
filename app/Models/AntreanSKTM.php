@@ -11,7 +11,16 @@ class AntreanSKTM extends Model
     protected $table = 'antrean_sktm';
     protected $guarded = [];
 
-    public function akun(){
-        return $this->belongsTo(Akun::class, 'username', 'username');
+    public function sktm()
+    {
+        return $this->belongsTo(SKTM::class, 'id_sktm', 'id_sktm');
+    }
+    public function status()
+    {
+        return $this->hasMany(status::class, 'id_status', 'id_status');
+    }
+    public function Akun()
+    {
+        return $this->hasMany(Akun::class, 'username', 'username');
     }
 }

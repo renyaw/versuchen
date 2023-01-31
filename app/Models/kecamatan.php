@@ -14,11 +14,6 @@ class kecamatan extends Model
 
     public function kelurahan()
     {
-        return $this->belongsTo(Masyarakat::class, 'nik', 'nik');
-    }
-
-    public function antrean_kredit()
-    {
-        return $this->hasMany(Masyarakat::class, 'username', 'username');
+        return $this->hasMany(kelurahan::class, 'id_kec', 'id_kec');
     }
 }
