@@ -131,3 +131,5 @@ Route::get('/dashboardmasy', function () {
 Route::resource('akun', AkunController::class);
 
 Route::resource('antreanSKTM', SKTMController::class);
+
+Route::resource('antreandomisili', SKTMController::class);

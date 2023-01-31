@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
+
+use App\Models\AntreanDomisili;
 use Illuminate\Http\Request;
 
-use App\Models\AntreanKredit;
-
-class kreditController extends Controller
+class DomisiliController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,23 +14,9 @@ class kreditController extends Controller
      */
     public function index()
     {
-        // $antrean_kredit = AntreanKredit::all();
-        // return view('kelurahan/verifikasi',compact('antrean_kredit'));
-        // Query Builder
-        $query = DB::table('antrean_kredit')
-                    ->select('antrean_kredit.*',"akun.nik as nik_u","masyarakat.*")
-                    ->leftJoin('akun',function($join) {
-                        $join->on('antrean_kredit.username','=','akun.username');
-                    })
-                    ->leftJoin('masyarakat',function($join) {
-                        $join->on('masyarakat.nik','=','akun.nik');
-                    })
-                    ->get();
-        
-        
+        $antrean_domisili = antrean_domisili::all();
 
-        // dd($query);
-        return view('kelurahan/verifikasi',compact('query'));
+        return $antrean_domisili;
     }
 
     /**
@@ -53,14 +38,14 @@ class kreditController extends Controller
     public function store(Request $request)
     {
         $data = [
-            'id_kredit' => $request-> id_kredit,
-            'sp_kel_kredit' => $request-> sp_kel_kredit,
-            'kk_kredit' => $request-> kk_kredit,
-            'ktp_kredit' => $request-> ktp_kredit,
-            'lain_kredit' => $request-> lain_kredit,
-            'tgl_antre_kredit' => $request-> tgl_antre_kredit,
+            'id_dom' => $request-> id_dom,
+            'sp_kel_dom' => $request-> nama,
+            'ktp_dom' => $request-> ktp_dom,
+            'lain_dom' => $request-> lain_dom,
+            'tgl_antre_dom' => $request-> tgl_antre_dom,
         ];
         domisili::create($data);
+
     }
 
     /**
