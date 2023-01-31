@@ -8,12 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class SKTM extends Model
 {
     use HasFactory;
-    public function kelurahan()
-    {
-        return $this->hasMany(kelurahan::class, 'noreg_sktm', 'noreg_sktm');
-    }
+    protected $table = 'sktm';
+    protected $guarded = [];
+
+    //Antrean
     public function antrean_sktm()
     {
-        return $this->belongsTo(AntreanDomisili::class, 'id_sktm', 'id_sktm');
+        return $this->belongsTo(AntreanSKTM::class, 'id_sktm', 'id_sktm');
     }
+    //Kelurahan
+    public function kelurahan()
+    {
+        return $this->belongsTo(kelurahan::class, 'noreg_sktm', 'noreg_sktm');
+    }
+
 }

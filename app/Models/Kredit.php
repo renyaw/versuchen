@@ -11,13 +11,15 @@ class Kredit extends Model
     protected $table = 'kredit';
     protected $guarded = [];
 
-
-    public function kelurahan()
-    {
-        return $this->hasMany(kelurahan::class, 'noreg_kredit', 'noreg_kredit');
-    }
+    //Antrean
     public function antrean_kredit()
     {
         return $this->belongsTo(AntreanKredit::class, 'id_kredit', 'id_kredit');
     }
+    //Kelurahan
+    public function kelurahan()
+    {
+        return $this->belongsTo(kelurahan::class, 'noreg_kredit', 'noreg_kredit');
+    }
+
 }
