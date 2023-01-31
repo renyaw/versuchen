@@ -12,12 +12,12 @@ class Kredit extends Model
     protected $guarded = [];
 
     //Antrean
-    public function antrean_kredit()
+    public function output_kredit()
     {
         return $this->belongsTo(AntreanKredit::class, 'id_kredit', 'id_kredit');
     }
     //Kelurahan
-    public function kelurahan()
+    public function kredit_kel()
     {
         return $this->belongsTo(kelurahan::class, 'noreg_kredit', 'noreg_kredit');
     }

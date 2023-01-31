@@ -12,12 +12,12 @@ class SKTM extends Model
     protected $guarded = [];
 
     //Antrean
-    public function antrean_sktm()
+    public function output_sktm()
     {
         return $this->belongsTo(AntreanSKTM::class, 'id_sktm', 'id_sktm');
     }
     //Kelurahan
-    public function kelurahan()
+    public function sktm_kel()
     {
         return $this->belongsTo(kelurahan::class, 'noreg_sktm', 'noreg_sktm');
     }

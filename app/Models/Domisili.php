@@ -11,12 +11,12 @@ class Domisili extends Model
     protected $table = 'domisili';
     protected $guarded = [];
     //Antrean
-    public function antrean_domisili()
+    public function output_domisili()
     {
         return $this->belongsTo(AntreanDomisili::class, 'id_dom', 'id_dom');
     }
     //Kelurahan
-    public function kelurahan()
+    public function dom_kel()
     {
         return $this->belongsTo(kelurahan::class, 'noreg_dom', 'noreg_dom');
     }

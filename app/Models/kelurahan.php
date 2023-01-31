@@ -13,21 +13,24 @@ class kelurahan extends Model
     protected $table = 'kelurahan';
     protected $guarded = [];
 
-    public function kecamatan()
-    {
-        return $this->hasMany(kecamatan::class, 'id_kec', 'id_kec');
-    }
-    public function kredit()
+    //Layanan
+    public function kel_kredit()
     {
         return $this->hasMany(Kredit::class, 'noreg_kredit', 'noreg_kredit');
     }
-    public function SKTM()
+    public function kel_SKTM()
     {
         return $this->hasMany(SKTM::class, 'noreg_sktm', 'noreg_sktm');
     }
 
-    public function domisili()
+    public function kel_dom()
     {
         return $this->hasMany(Domisili::class, 'noreg_dom', 'noreg_dom');
     }
+    //Kecamatan
+    public function kel_kec()
+    {
+        return $this->belongsTo(kecamatan::class, 'id_kec', 'id_kec');
+    }
+
 }
