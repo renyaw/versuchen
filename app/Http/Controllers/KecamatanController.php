@@ -15,7 +15,7 @@ class KecamatanController extends Controller
      */
     public function index()
     {
-        $kecamatan = kecamatan ::all();
+        $kecamatan = kecamatan::all();
 
         return $kecamatan;
     }
