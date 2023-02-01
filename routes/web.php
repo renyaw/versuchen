@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\kreditController;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\SKTMController;
+use App\Http\Controllers\DomisiliController;
 
 
 /*
@@ -57,7 +58,9 @@ Route::get('/berkas', function () {
     return view('masyarakat/berkas');
 });
 
-Route::get('/verifikasi', [kreditController::class, 'index']);
+Route::get('/verifkredit', [kreditController::class, 'index']);
+Route::get('/verifsktm', [SKTMController::class, 'index']);
+Route::get('/verifdom', [DomisiliController::class, 'index']);
 
 Route::get('/berhasil', function () {
     return view('masyarakat/berhasil');

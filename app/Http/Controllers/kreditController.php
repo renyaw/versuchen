@@ -27,11 +27,11 @@ class kreditController extends Controller
                         $join->on('masyarakat.nik','=','akun.nik');
                     })
                     ->get();
-        
-        
+
+
 
         // dd($query);
-        return view('kelurahan/verifikasi',compact('query'));
+        return view('kelurahan/verifkredit',compact('query'));
     }
 
     /**
