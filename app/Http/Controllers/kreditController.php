@@ -18,16 +18,19 @@ class kreditController extends Controller
         // $antrean_kredit = AntreanKredit::all();
         // return view('kelurahan/verifikasi',compact('antrean_kredit'));
         // Query Builder
-        $query = DB::table('antrean_kredit')
-                    ->select('antrean_kredit.*',"akun.nik as nik_u","masyarakat.*")
-                    ->leftJoin('akun',function($join) {
-                        $join->on('antrean_kredit.username','=','akun.username');
-                    })
-                    ->leftJoin('masyarakat',function($join) {
-                        $join->on('masyarakat.nik','=','akun.nik');
-                    })
-                    ->get();
+        // $query = DB::table('antrean_kredit')
+        //             ->select('antrean_kredit.*',"akun.nik as nik_u","masyarakat.*")
+        //             ->leftJoin('akun',function($join) {
+        //                 $join->on('antrean_kredit.username','=','akun.username');
+        //             })
+        //             ->leftJoin('masyarakat',function($join) {
+        //                 $join->on('masyarakat.nik','=','akun.nik');
+        //             })
+        //             ->get();
 
+        $query = DB::table('antrean_kredit')->get();
+
+        
 
 
         // dd($query);
