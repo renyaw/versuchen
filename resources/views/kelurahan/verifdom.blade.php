@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Masuk</title>
+        <title>Verifikasi Kredit</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         </head>
     <body>
@@ -18,9 +18,8 @@
         <div class="form-group">
             <select class="form-select " name="tampilan" id="tampilan">
                 <option value="0">Tampilkan Berdasarkan</option>
-                <option value="1">Domisili Tempat Tinggal</option>
-                <option value="2">Domisili Usaha</option>
-                <option value="3">SKTM</option>
+                <option value="1">Selesai</option>
+                <option value="2">Belum Selesai</option>
             </select>
         </div>
         <br>
@@ -36,11 +35,11 @@
                         <th>No</th>
                         <th>NIK</th>
                         <th>Nama</th>
-                        <th>Jenis Layanan</th>
+                        <th>Alamat</th>
                         <th>Status</th>
                         <th>Action</th>
-        
-                        
+
+
                     </tr>
                     @foreach($query as $data)
                     <td>{{$data->id_kredit}}</td>
@@ -51,7 +50,7 @@
                     <td>{{$data->no_telp}}</td>
                     <td>{{$data->ktp_kredit}}</td>
                     @endforeach
-                </div> 
+                </div>
             </div>
         </div>
     </section>
