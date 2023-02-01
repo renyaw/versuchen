@@ -18,7 +18,9 @@
             <h4 class="text-center mt-3">Surat Pengantar Kredit</h4>
         </div>
         <div class="konten">
-            <form action="" method="POST" autocomplete="on" name="form">
+            <form action="{{route('kredit.store')}}" method="POST" autocomplete="on" name="form">
+                {{ csrf_token() }}
+                @method('put')
                 <div class="row mt-4">
                      <!-- Left -->
                     <div class="col-6">
@@ -37,7 +39,7 @@
                         <div class="form-group">
                             <label for="pengantarKel">Surat Pengantar Kelurahan <a href="">Unduh</a></label>
                             <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile02" name="pengantarKel" placeholder="Input">
+                                <input type="file" class="form-control" id="pengantarKel" name="pengantarKel" placeholder="Input">
                                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
                             </div>
                         </div>
@@ -45,7 +47,7 @@
                         <div class="form-group">
                             <label for="KTP">Kartu Tanda Penduduk</label>
                             <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile02" name="KTP" placeholder="Input">
+                                <input type="file" class="form-control" id="ktp" name="KTP" placeholder="Input">
                                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
                             </div>
                         </div>
@@ -71,7 +73,7 @@
                         <div class="form-group">
                             <label for="kk">Kartu Keluarga</label>
                             <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile02" name="kk">
+                                <input type="file" class="form-control" id="kk" name="kk">
                                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
                             </div>
                         </div>
@@ -79,7 +81,7 @@
                         <div class="form-group">
                             <label for="lain">Berkas Lain</label>
                             <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile02" name="lain" placeholder="Input">
+                                <input type="file" class="form-control" id="lain" name="lain" placeholder="Input">
                                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
                             </div>
                         </div>
@@ -89,6 +91,7 @@
                 </div>
                 <!-- End Right -->
                 <div class="col-auto d-flex justify-content-end">
+
                         <button type="submit" name="submit" value="submit" class="btn btn-outline-success">Submit</button>
                     </div>
 

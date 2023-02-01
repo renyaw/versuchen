@@ -44,11 +44,11 @@
                     @foreach($query as $data)
                     <td>{{$data->id_kredit}}</td>
                     {{-- <td>{{$data->akun->nik}}</td> --}}
-                    <td>{{$data->nik}}</td>
-                    <td>{{$data->nama}}</td>
-                    <td>{{$data->alamat}}</td>
-                    <td>{{$data->no_telp}}</td>
-                    <td>{{$data->ktp_kredit}}</td>
+                    <td>{{$data->pengajuan_kredit->masyarakat->nik}}</td>
+                    <td>{{$data->pengajuan_kredit->masyarakat->nama}}</td>
+                    <td>{{$data->pengajuan_kredit->masyarakat->alamat}}</td>
+                    <td>{{$data->kredit_status->proses}}</td>
+
                     @endforeach
                 </div>
             </div>

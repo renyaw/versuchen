@@ -15,6 +15,7 @@ class kreditController extends Controller
      */
     public function index()
     {
+        
         // $antrean_kredit = AntreanKredit::all();
         // return view('kelurahan/verifikasi',compact('antrean_kredit'));
         // Query Builder
@@ -28,9 +29,10 @@ class kreditController extends Controller
         //             })
         //             ->get();
 
-        $query = DB::table('antrean_kredit')->get();
+        // $query = DB::table('antrean_kredit')->get();
+        $query = AntreanKredit::all();
 
-        
+
 
 
         // dd($query);
@@ -55,13 +57,14 @@ class kreditController extends Controller
      */
     public function store(Request $request)
     {
+        return $request;
         $data = [
-            'id_kredit' => $request-> id_kredit,
-            'sp_kel_kredit' => $request-> sp_kel_kredit,
-            'kk_kredit' => $request-> kk_kredit,
-            'ktp_kredit' => $request-> ktp_kredit,
-            'lain_kredit' => $request-> lain_kredit,
-            'tgl_antre_kredit' => $request-> tgl_antre_kredit,
+            'id_kredit' => $request->id_kredit,
+            'sp_kel_kredit' => $request->sp_kel_kredit,
+            'kk_kredit' => $request->kk_kredit,
+            'ktp_kredit' => $request->ktp_kredit,
+            'lain_kredit' => $request->lain_kredit,
+            'tgl_antre_kredit' => $request->tgl_antre_kredit,
         ];
         domisili::create($data);
     }

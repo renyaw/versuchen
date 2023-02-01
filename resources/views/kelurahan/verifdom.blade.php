@@ -42,13 +42,11 @@
 
                     </tr>
                     @foreach($query as $data)
-                    <td>{{$data->id_kredit}}</td>
-                    {{-- <td>{{$data->akun->nik}}</td> --}}
-                    <td>{{$data->nik}}</td>
-                    <td>{{$data->nama}}</td>
-                    <td>{{$data->alamat}}</td>
-                    <td>{{$data->no_telp}}</td>
-                    <td>{{$data->ktp_kredit}}</td>
+                    <td>{{$data->id_dom}}</td>
+                    <td>{{$data->pengajuan_domisili->masyarakat->nik}}</td>
+                    <td>{{$data->pengajuan_domisili->masyarakat->nama}}</td>
+                    <td>{{$data->pengajuan_domisili->masyarakat->alamat}}</td>
+                    <td>{{$data->dom_status->proses}}</td>
                     @endforeach
                 </div>
             </div>

@@ -14,9 +14,9 @@ class DomisiliController extends Controller
      */
     public function index()
     {
-        $antrean_domisili = antrean_domisili::all();
+        $query = AntreanDomisili::all();
 
-        return $antrean_domisili;
+        return view('kelurahan/verifdom',compact('query'));
     }
 
     /**
@@ -38,11 +38,11 @@ class DomisiliController extends Controller
     public function store(Request $request)
     {
         $data = [
-            'id_dom' => $request-> id_dom,
-            'sp_kel_dom' => $request-> nama,
-            'ktp_dom' => $request-> ktp_dom,
-            'lain_dom' => $request-> lain_dom,
-            'tgl_antre_dom' => $request-> tgl_antre_dom,
+            'id_dom' => $request->id_dom,
+            'sp_kel_dom' => $request->nama,
+            'ktp_dom' => $request->ktp_dom,
+            'lain_dom' => $request->lain_dom,
+            'tgl_antre_dom' => $request->tgl_antre_dom,
         ];
         domisili::create($data);
 

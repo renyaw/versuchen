@@ -13,14 +13,14 @@ class status extends Model
 
     public function status_sktm()
     {
-        return $this->hasMany(AntreanSKTM::class, 'id_status', 'id_status');
+        return $this->hasMany(AntreanSKTM::class, 'id_status');
     }
     public function status_kredit()
     {
-        return $this->hasMany(AntreanKredit::class, 'id_status', 'id_status');
+        return $this->hasMany(AntreanKredit::class, 'id_status');
     }
     public function status_dom()
     {
-        return $this->hasMany(AntreanDomisili::class, 'id_status', 'id_status');
+        return $this->hasMany(AntreanDomisili::class, 'id_status');
     }
 }

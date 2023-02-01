@@ -2,10 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\kreditController;
+use App\Http\Controllers\kredit2Controller;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\SKTMController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\KecamatanController;
+use App\Http\Controllers\DomisiliController;
 
 
 /*
@@ -23,7 +25,7 @@ Route::get('/signin', function () {
     return view('signin');
 });
 
-Route::get('/', function () {
+Route::get('/', function () {https://drive.google.com/drive/u/0/folders/1o9fY_8y0e5w20aezfzSjXKbyqBQJW1dC
     return view('guest/berandaguest');
 });
 
@@ -74,9 +76,7 @@ Route::get('/datadiri', function () {
 Route::get('/kitas', function () {
     return view('masyarakat/kitas');
 });
-Route::get('/kredit', function () {
-    return view('masyarakat/kredit');
-});
+
 Route::get('/lain', function () {
     return view('masyarakat/lain');
 });
@@ -141,3 +141,6 @@ Route::resource('antreandomisili', DomisiliController::class);
 Route::resource('kelurahan', KelurahanController::class);
 
 Route::resource('kecamatan', KecamatanController::class);
+
+Route::resource('kredit', kredit2Controller::class);
+

@@ -20,7 +20,7 @@ class AntreanKredit extends Model
     // Status
     public function kredit_status()
     {
-        return $this->belongsTo(status::class, 'id_status', 'id_status');
+        return $this->belongsTo(status::class, 'status', 'id_status');
     }
     //Layanan
     public function input_kredit()
