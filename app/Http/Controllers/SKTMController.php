@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use DB;
+
 use Illuminate\Http\Request;
 
 use App\Models\AntreanSKTM;
@@ -15,9 +17,9 @@ class SKTMController extends Controller
      */
     public function index()
     {
-        $antrean_SKTM = AntreanSKTM::all();
+        $query = AntreanSKTM::all();
 
-        return $antrean_SKTM;
+        return view('kelurahan/verifSKTM',compact('query'));
     }
         
     
