@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\kreditController;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\SKTMController;
+use App\Http\Controllers\KelurahanController;
+use App\Http\Controllers\KecamatanController;
 
 
 /*
@@ -133,3 +135,7 @@ Route::resource('akun', AkunController::class);
 Route::resource('antreanSKTM', SKTMController::class);
 
 Route::resource('antreandomisili', SKTMController::class);
+
+Route::resource('kelurahan', SKTMController::class);
+
+Route::resource('kecamatan', SKTMController::class);
