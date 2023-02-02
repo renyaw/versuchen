@@ -25,13 +25,13 @@
                         <div class="form-group">
                             <!-- Default diambil dari daftar -->
                             <label for="nama">Nama</label>
-                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Default tp bisa diganti" >
+                            <input type="text" class="form-control" id="nama" name="nama" value="{{ $data->nama }}">
                         </div>
                         <br>
                         <div class="form-group">
                             <!-- Default diambil dari daftar -->
                             <label for="ibu">Nama Ibu</label>
-                            <input type="text" class="form-control" id="ibu" name="ibu" placeholder="Default tp bisa diganti" >
+                            <input type="text" class="form-control" id="ibu" name="ibu" value="{{ $data->nama_ibu }}">
                         </div>
                         <br>
                         <div class="form-group">
@@ -55,13 +55,13 @@
                         <div class="form-group">
                             <!-- Default diambil dari daftar -->
                             <label for="nik">NIK</label>
-                            <input type="text" class="form-control" id="nik" name="nik" placeholder="Default tp bisa diganti" >
+                            <input type="text" class="form-control" id="nik" name="nik" value="{{ $data->NIK }}">
                         </div>
                         <br>
                         <div class="form-group">
                             <!-- Default diambil dari daftar -->
                             <label for="tgl">Tanggal Lahir</label>
-                            <input type="date" class="form-control" id="tgl" name="tgl"  >
+                            <input type="date" class="form-control" id="tgl" name="tgl" value="{{ $data->tgl_lahir }}">
                         </div>
                         <br>
                         <div class="form-group">

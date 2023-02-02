@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Masyarakat;
+use App\Models\Kecamatan;
 
-class DataMasyarakatController extends Controller
+class EditDataMasyarakatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -57,7 +58,10 @@ class DataMasyarakatController extends Controller
      */
     public function edit($id)
     {
-        $data = Masyarakat
+        $data = Masyarakat::where('nik',$id)->first();
+        return view('datadiri')->with('data',$data);
+
+        $kecamatan = kecamatan::all();
     }
 
     /**
