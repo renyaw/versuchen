@@ -13,7 +13,13 @@ class StatMasyController extends Controller
      */
     public function index()
     {
-        //
+        $query = status::all();
+
+
+
+
+        // dd($query);
+        return view('masyarakat/status',compact('query'));
     }
 
     /**
