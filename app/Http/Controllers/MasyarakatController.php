@@ -14,7 +14,7 @@ class MasyarakatController extends Controller
      */
     public function index()
     {
-        //
+        return view('/masyarakat/signup');
     }
 
     /**
@@ -24,7 +24,7 @@ class MasyarakatController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Masyarakat;
 
-class DataMasyarakatCOntroller extends Controller
+class DataMasyarakatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class DataMasyarakatCOntroller extends Controller
      */
     public function index()
     {
-        return view('/masyarakat/datadiri');
+        
     }
 
     /**
@@ -23,7 +24,7 @@ class DataMasyarakatCOntroller extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -56,7 +57,7 @@ class DataMasyarakatCOntroller extends Controller
      */
     public function edit($id)
     {
-        //
+        return 'HI'.$id;
     }
 
     /**

@@ -54,7 +54,8 @@
           <div class="">
             <div class="card" style="border-radius: 1rem; border-color:#87CEFA; border-width: 2px;">
                 <div class="card-body">
-                  <form method="POST" autocomplete="on" name="form" onsubmit="return cekDaftar()" action="autentikasi/cek_daftar">
+                  <form method="POST" autocomplete="on" name="form" onsubmit="return cekDaftar()" action="{{url('signup')}}">
+                    {{ csrf_token() }}
                     <div class="form-group">
                           <label for="nik">NIK</label>
                           <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" >

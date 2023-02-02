@@ -8,6 +8,7 @@ use App\Http\Controllers\SKTMController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\DomisiliController;
+use App\Http\Controllers\DataMasyarakatController;
 
 
 /*
@@ -64,6 +65,7 @@ Route::get('/berkas', function () {
 Route::get('/verifkredit', [kreditController::class, 'index']);
 Route::get('/verifsktm', [SKTMController::class, 'index']);
 Route::get('/verifdom', [DomisiliController::class, 'index']);
+Route::get('/signup', [DataMasyarakatController::class, 'index']);
 
 Route::get('/berhasil', function () {
     return view('masyarakat/berhasil');
