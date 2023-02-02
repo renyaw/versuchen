@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use DB;
+
 use Illuminate\Http\Request;
+
+use App\Models\status;
 
 class StatMasyController extends Controller
 {
@@ -13,7 +17,7 @@ class StatMasyController extends Controller
      */
     public function index()
     {
-        $query = Akun::all();
+        $query = Status::all();
         return view('masyarakat/status',compact('query'));
     }
 

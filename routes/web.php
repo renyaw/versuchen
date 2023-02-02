@@ -8,7 +8,7 @@ use App\Http\Controllers\SKTMController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\DomisiliController;
-use App\Http\Controllers\DataMasyarakatController;
+use App\Http\Controllers\EditDataController;
 use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\StatMasyController;
 
@@ -68,7 +68,7 @@ Route::get('/verifkredit', [kreditController::class, 'index']);
 Route::get('/verifsktm', [SKTMController::class, 'index']);
 Route::get('/verifdom', [DomisiliController::class, 'index']);
 Route::get('/status', [StatMasyController::class, 'index']);
-Route::get('/datadiri', [DataMasyarakatController::class, 'index']);
+Route::get('/datadiri', [EditDataController::class, 'index']);
 Route::get('/signup', [MasyarakatController::class, 'index']);
 
 Route::get('/berhasil', function () {
@@ -92,9 +92,9 @@ Route::get('/lihatberkas', function () {
     return view('/kelurahan/lihatberkas');
 });
 
-Route::get('/status', function () {
-    return view('masyarakat/status');
-});
+//Route::get('/status', function () {
+//    return view('masyarakat/status');
+//});
 
 Route::get('/lihatdomisili', function () {
     return view('kelurahan/lihatdomisili');
