@@ -18,7 +18,7 @@
         @foreach($query as $data)
         <div class="container mt-4">
         <div class="card p-2">
-            <h5 class="card-header">{{$data->status_kredit->id_kredit || $data->status_sktm->id_sktm}}</h5>
+            <h5 class="card-header">{{$data->antrean_sktm->}}</h5>
             <div class="card-body">
                 <h5 class="card-title">Diajukan Pada Tanggal {{$data->status_sktm->tgl_antre_sktm}}</h5>
             </div>
