@@ -10,6 +10,7 @@ use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\DomisiliController;
 use App\Http\Controllers\DataMasyarakatController;
 use App\Http\Controllers\MasyarakatController;
+use App\Http\Controllers\StatMasyController;
 
 
 /*

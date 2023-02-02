@@ -18,25 +18,23 @@
         @foreach($query as $data)
         <div class="container mt-4">
         <div class="card p-2">
-            <h5 class="card-header">{{$data->status_sktm->id_sktm }}</h5>
+            <h5 class="card-header">{{$data->status_kredit->id_kredit || $data->status_sktm->id_sktm}}</h5>
             <div class="card-body">
                 <h5 class="card-title">Diajukan Pada Tanggal {{$data->status_sktm->tgl_antre_sktm}}</h5>
             </div>
             <div class="card-footer">
                 <div class="row">
                     <div class="col-8">
-                        <p class="card-text">Wing wing wing wing wing</p>
+                        <p class="card-text">Permohonan Anda: {{$data}} </p>
                     </div>
                     <div class="col-4 d-flex justify-content-end">
                         <a href="#" class="btn btn-outline-warning">Go somewhere</a>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
         </div>
+        @endforeach
     @endsection
 
     <!-- Content End -->
