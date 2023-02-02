@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2023 at 07:42 AM
+-- Generation Time: Feb 02, 2023 at 08:22 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -301,7 +301,9 @@ CREATE TABLE `users` (
   `nama_ibu` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `alamat` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `no_telp` varchar(13) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `username` int(11) NOT NULL
+  `username` int(11) NOT NULL,
+  `kelurahan` int(5) NOT NULL,
+  `kecamatan` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -415,7 +417,9 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`),
   ADD UNIQUE KEY `nik` (`nik`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD UNIQUE KEY `username` (`username`),
+  ADD KEY `fk_kel_masy` (`kelurahan`),
+  ADD KEY `fk_kec_masy` (`kecamatan`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -496,6 +500,13 @@ ALTER TABLE `kredit`
 ALTER TABLE `sktm`
   ADD CONSTRAINT `fk_id_kel_sktm` FOREIGN KEY (`id_kel`) REFERENCES `kelurahan` (`id_kel`),
   ADD CONSTRAINT `fk_id_status_sktm` FOREIGN KEY (`id_sktm`) REFERENCES `antrean_sktm` (`id_sktm`);
+
+--
+-- Constraints for table `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `fk_kec_masy` FOREIGN KEY (`kecamatan`) REFERENCES `kecamatan` (`id_kec`),
+  ADD CONSTRAINT `fk_kel_masy` FOREIGN KEY (`kelurahan`) REFERENCES `kelurahan` (`id_kel`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
