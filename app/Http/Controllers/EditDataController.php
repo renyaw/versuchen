@@ -14,7 +14,7 @@ class DataMasyarakatController extends Controller
      */
     public function index()
     {
-        
+        return view('/masyarakat/datadiri'); 
     }
 
     /**
@@ -57,7 +57,7 @@ class DataMasyarakatController extends Controller
      */
     public function edit($id)
     {
-        return 'HI'.$id;
+        $data = Masyarakat
     }
 
     /**

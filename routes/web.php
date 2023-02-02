@@ -67,7 +67,7 @@ Route::get('/verifkredit', [kreditController::class, 'index']);
 Route::get('/verifsktm', [SKTMController::class, 'index']);
 Route::get('/verifdom', [DomisiliController::class, 'index']);
 Route::get('/status', [StatMasyController::class, 'index']);
-Route::get('/signup', [DataMasyarakatController::class, 'index']);
+Route::get('/datadiri', [DataMasyarakatController::class, 'index']);
 Route::get('/signup', [MasyarakatController::class, 'index']);
 
 Route::get('/berhasil', function () {
