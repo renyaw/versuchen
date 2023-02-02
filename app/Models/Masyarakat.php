@@ -21,4 +21,8 @@ class Masyarakat extends Model
     {
         return $this->belongsTo(Akun::class, 'nik', 'nik');
     }
+    public function fk_kel()
+    {
+        return $this->belongsTo(kelurahan::class, 'nik', 'nik');
+    }
 }

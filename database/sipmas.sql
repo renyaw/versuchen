@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2023 at 08:31 AM
+-- Generation Time: Feb 02, 2023 at 08:22 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -24,25 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `akun`
---
-
-CREATE TABLE `akun` (
-  `username` varchar(15) NOT NULL,
-  `password` varchar(15) NOT NULL,
-  `nik` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `akun`
---
-
-INSERT INTO `akun` (`username`, `password`, `nik`) VALUES
-('sqlgans', 'sqlgans', '3373135806010004');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `antrean_domisili`
 --
 
@@ -52,10 +33,17 @@ CREATE TABLE `antrean_domisili` (
   `ktp_dom` varchar(100) NOT NULL,
   `lain_dom` varchar(100) DEFAULT NULL,
   `tgl_antre_dom` date NOT NULL,
-  `username` varchar(15) NOT NULL,
   `id_kel` int(11) NOT NULL,
-  `status` int(11) NOT NULL
+  `status` int(11) NOT NULL,
+  `id_user_dom` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `antrean_domisili`
+--
+
+INSERT INTO `antrean_domisili` (`id_dom`, `sp_kel_dom`, `ktp_dom`, `lain_dom`, `tgl_antre_dom`, `id_kel`, `status`, `id_user_dom`) VALUES
+(1, 'sdfghjkl.pdf', 'dfghjk.pdf', 'sdfghj.pdf', '2023-02-01', 201, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -70,7 +58,6 @@ CREATE TABLE `antrean_kredit` (
   `ktp_kredit` varchar(100) NOT NULL,
   `lain_kredit` varchar(100) DEFAULT NULL,
   `tgl_antre_kredit` date NOT NULL,
-  `username` varchar(15) NOT NULL,
   `id_kel` int(11) NOT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -79,8 +66,8 @@ CREATE TABLE `antrean_kredit` (
 -- Dumping data for table `antrean_kredit`
 --
 
-INSERT INTO `antrean_kredit` (`id_kredit`, `sp_kel_kredit`, `kk_kredit`, `ktp_kredit`, `lain_kredit`, `tgl_antre_kredit`, `username`, `id_kel`, `status`) VALUES
-(1, 'spkel.pdf', 'kkkret.pdf', 'klp.pdf', 'lain.pdf', '2023-01-02', 'sqlgans', 201, 0);
+INSERT INTO `antrean_kredit` (`id_kredit`, `sp_kel_kredit`, `kk_kredit`, `ktp_kredit`, `lain_kredit`, `tgl_antre_kredit`, `id_kel`, `status`) VALUES
+(1, 'spkel.pdf', 'kkkret.pdf', 'klp.pdf', 'lain.pdf', '2023-01-02', 201, 0);
 
 -- --------------------------------------------------------
 
@@ -97,7 +84,6 @@ CREATE TABLE `antrean_sktm` (
   `tujuan` varchar(250) NOT NULL,
   `lain_sktm` varchar(100) DEFAULT NULL,
   `tgl_antre_sktm` date NOT NULL,
-  `username` varchar(15) NOT NULL,
   `id_kel` int(11) NOT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -308,7 +294,16 @@ CREATE TABLE `users` (
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `nik` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nama` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tgl_lahir` date NOT NULL,
+  `nama_ibu` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alamat` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `no_telp` varchar(13) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` int(11) NOT NULL,
+  `kelurahan` int(5) NOT NULL,
+  `kecamatan` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -316,18 +311,10 @@ CREATE TABLE `users` (
 --
 
 --
--- Indexes for table `akun`
---
-ALTER TABLE `akun`
-  ADD PRIMARY KEY (`username`),
-  ADD KEY `fk_nik` (`nik`);
-
---
 -- Indexes for table `antrean_domisili`
 --
 ALTER TABLE `antrean_domisili`
   ADD PRIMARY KEY (`id_dom`),
-  ADD KEY `fk_username_dom` (`username`),
   ADD KEY `fk_kel_antre_dom` (`id_kel`),
   ADD KEY `fk_status_dom` (`status`);
 
@@ -336,7 +323,6 @@ ALTER TABLE `antrean_domisili`
 --
 ALTER TABLE `antrean_kredit`
   ADD PRIMARY KEY (`id_kredit`),
-  ADD KEY `fk_username_kredit` (`username`),
   ADD KEY `fk_kel_antre_kredit` (`id_kel`),
   ADD KEY `fk_status_kredit` (`status`);
 
@@ -345,7 +331,6 @@ ALTER TABLE `antrean_kredit`
 --
 ALTER TABLE `antrean_sktm`
   ADD PRIMARY KEY (`id_sktm`),
-  ADD KEY `fk_username_sktm` (`username`),
   ADD KEY `fk_kel_antre_sktm` (`id_kel`),
   ADD KEY `fk_status_sktm` (`status`);
 
@@ -430,7 +415,11 @@ ALTER TABLE `status`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
+  ADD UNIQUE KEY `users_email_unique` (`email`),
+  ADD UNIQUE KEY `nik` (`nik`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD KEY `fk_kel_masy` (`kelurahan`),
+  ADD KEY `fk_kec_masy` (`kecamatan`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -465,34 +454,25 @@ ALTER TABLE `users`
 --
 
 --
--- Constraints for table `akun`
---
-ALTER TABLE `akun`
-  ADD CONSTRAINT `fk_nik` FOREIGN KEY (`nik`) REFERENCES `masyarakat` (`nik`);
-
---
 -- Constraints for table `antrean_domisili`
 --
 ALTER TABLE `antrean_domisili`
   ADD CONSTRAINT `fk_kel_antre_dom` FOREIGN KEY (`id_kel`) REFERENCES `kelurahan` (`id_kel`),
-  ADD CONSTRAINT `fk_status_dom` FOREIGN KEY (`status`) REFERENCES `status` (`id_status`),
-  ADD CONSTRAINT `fk_username_dom` FOREIGN KEY (`username`) REFERENCES `akun` (`username`);
+  ADD CONSTRAINT `fk_status_dom` FOREIGN KEY (`status`) REFERENCES `status` (`id_status`);
 
 --
 -- Constraints for table `antrean_kredit`
 --
 ALTER TABLE `antrean_kredit`
   ADD CONSTRAINT `fk_kel_antre_kredit` FOREIGN KEY (`id_kel`) REFERENCES `kelurahan` (`id_kel`),
-  ADD CONSTRAINT `fk_status_kredit` FOREIGN KEY (`status`) REFERENCES `status` (`id_status`),
-  ADD CONSTRAINT `fk_username_kredit` FOREIGN KEY (`username`) REFERENCES `akun` (`username`);
+  ADD CONSTRAINT `fk_status_kredit` FOREIGN KEY (`status`) REFERENCES `status` (`id_status`);
 
 --
 -- Constraints for table `antrean_sktm`
 --
 ALTER TABLE `antrean_sktm`
   ADD CONSTRAINT `fk_kel_antre_sktm` FOREIGN KEY (`id_kel`) REFERENCES `kelurahan` (`id_kel`),
-  ADD CONSTRAINT `fk_status_sktm` FOREIGN KEY (`status`) REFERENCES `status` (`id_status`),
-  ADD CONSTRAINT `fk_username_sktm` FOREIGN KEY (`username`) REFERENCES `akun` (`username`);
+  ADD CONSTRAINT `fk_status_sktm` FOREIGN KEY (`status`) REFERENCES `status` (`id_status`);
 
 --
 -- Constraints for table `domisili`
@@ -520,6 +500,13 @@ ALTER TABLE `kredit`
 ALTER TABLE `sktm`
   ADD CONSTRAINT `fk_id_kel_sktm` FOREIGN KEY (`id_kel`) REFERENCES `kelurahan` (`id_kel`),
   ADD CONSTRAINT `fk_id_status_sktm` FOREIGN KEY (`id_sktm`) REFERENCES `antrean_sktm` (`id_sktm`);
+
+--
+-- Constraints for table `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `fk_kec_masy` FOREIGN KEY (`kecamatan`) REFERENCES `kecamatan` (`id_kec`),
+  ADD CONSTRAINT `fk_kel_masy` FOREIGN KEY (`kelurahan`) REFERENCES `kelurahan` (`id_kel`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
