@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Masyarakat;
 use App\Models\Kecamatan;
 
-class EditDataMasyarakatController extends Controller
+class EditDataController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class EditDataMasyarakatController extends Controller
      */
     public function index()
     {
-        return view('/masyarakat/datadiri'); 
+        return view('/masyarakat/datadiri.edit'); 
     }
 
     /**

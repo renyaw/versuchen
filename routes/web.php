@@ -75,9 +75,9 @@ Route::get('/berhasil', function () {
     return view('masyarakat/berhasil');
 });
 
-Route::get('/datadiri', function () {
-    return view('masyarakat/datadiri');
-});
+// Route::get('/datadiri', function () {
+//     return view('masyarakat/datadiri');
+// });
 
 Route::get('/kitas', function () {
     return view('masyarakat/kitas');
@@ -149,4 +149,6 @@ Route::resource('kelurahan', KelurahanController::class);
 Route::resource('kecamatan', KecamatanController::class);
 
 Route::resource('kredit', kredit2Controller::class);
+
+Route::resource('datadiri', EditDataController::class);
 
